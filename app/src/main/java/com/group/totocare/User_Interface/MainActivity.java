@@ -1,10 +1,12 @@
-package com.group.totocare;
+package com.group.totocare.User_Interface;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+
+import com.group.totocare.R;
 
 public class MainActivity extends AppCompatActivity {
 
