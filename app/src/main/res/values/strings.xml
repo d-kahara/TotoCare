@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">TotoCare</string>
+
+    /*
+    string resources for Menu Main resources
+    */
+    <string name="action_settings">Settings</string>
 </resources>
