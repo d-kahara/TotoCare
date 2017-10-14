@@ -42,6 +42,8 @@
                 android:id="@+id/signInButton">
             </com.google.android.gms.common.SignInButton>
 
+
+
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>
