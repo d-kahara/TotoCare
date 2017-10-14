@@ -19,7 +19,8 @@
         <activity android:name=".Fragments.HomeFragment" />
         <activity android:name=".Fragments.BabyFragment" />
         <activity android:name=".Fragments.CheckUpsFragment" />
-        <activity android:name=".Fragments.CommunityFragment"></activity>
+        <activity android:name=".Fragments.CommunityFragment" />
+        <activity android:name=".User_Interface.SettingsActivity"></activity>
     </application>
 
 </manifest>
