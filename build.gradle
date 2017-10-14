@@ -16,6 +16,12 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        /*
+        Google Maven Url for Firebase
+         */
+        maven {
+            url "https://maven.google.com" // Google's Maven repository
+        }
     }
 }
 
