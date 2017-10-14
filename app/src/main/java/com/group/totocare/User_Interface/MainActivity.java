@@ -1,5 +1,6 @@
 package com.group.totocare.User_Interface;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -77,9 +78,16 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_settings:
+                settings_activity(item);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    public void settings_activity(MenuItem item) {
+        Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
