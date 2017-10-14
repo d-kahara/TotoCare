@@ -14,9 +14,9 @@ android {
     }
 
     dexOptions  {
-        javaMaxeapSize "4g"
+        javaMaxHeapSize "4g"
     }
-    
+
     buildTypes {
         release {
             minifyEnabled false
@@ -44,3 +44,4 @@ dependencies {
     compile 'com.android.support:multidex:1.0.1'
     testCompile 'junit:junit:4.12'
 }
+apply plugin: 'com.google.gms.google-services'
