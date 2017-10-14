@@ -1,12 +1,11 @@
 package com.group.totocare.User_Interface;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.Auth;
@@ -26,9 +25,11 @@ import com.google.firebase.auth.GoogleAuthProvider;
 import com.group.totocare.R;
 
 public class StartActivity extends AppCompatActivity implements View.OnClickListener{
-    private GoogleApiClient mGoogleApiClient;
+
+
+    private GoogleApiClient mGoogleApiClient;//create local variable of type GoogleApiClient required for any connection to a Google APU
     private static final int RC_SIGN_IN=1;
-    private TextView mStatusTextView;
+    //private TextView mStatusTextView;
     private static final String TAG=MainActivity.class.getSimpleName();
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -55,7 +56,7 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
         /*Build a GoogleApiClient with access to the Google Sign-In API and the
 // options specified by gso.*/
 
-        mGoogleApiClient = new GoogleApiClient.Builder(getApplicationContext())
+        mGoogleApiClient = new GoogleApiClient.Builder(getApplicationContext())//builder configures the GoogleAPIClient
                 .enableAutoManage(this, new GoogleApiClient.OnConnectionFailedListener(){
                     @Override
                     public void onConnectionFailed(@NonNull ConnectionResult connectionResult){
@@ -119,8 +120,8 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
                 GoogleSignInAccount account = result.getSignInAccount();
                 firebaseAuthWithGoogle(account);
             } else {
-                // Google Sign In failed, update UI appropriately
-                // ...
+                // Google Sign In failed, UI to later be updated accordingly
+
             }
         }
     }
@@ -146,7 +147,7 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
                             //updateUI(null);
                         }
 
-                        // ...
+
                     }
                 });
     }
