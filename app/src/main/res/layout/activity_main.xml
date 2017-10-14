@@ -21,6 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:layout_below="@+id/cardView_MainActivityxml"
+        android:layout_above="@+id/tabLayout_MainActivityxml"
         android:id="@+id/viewPager_MainActivityxml">
 
     </android.support.v4.view.ViewPager>
@@ -28,9 +29,11 @@
     <android.support.design.widget.TabLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/viewPager_MainActivityxml"
         android:id="@+id/tabLayout_MainActivityxml"
-        android:background="@color/colorPrimary">
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
 
     </android.support.design.widget.TabLayout>
 
