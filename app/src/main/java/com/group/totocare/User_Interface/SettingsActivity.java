@@ -31,7 +31,7 @@ public class SettingsActivity extends AppCompatActivity {
     private ImageView mProfileImage;
 
     private FirebaseAuth mAuth;
-    private DatabaseReference mDriverDatabase;
+    private DatabaseReference mMotherDatabase;
 
     private String userID;
     private String mName;
@@ -64,7 +64,10 @@ public class SettingsActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         userID = mAuth.getCurrentUser().getUid();
-        mDriverDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child("Mothers").child(userID);
+
+
+//     Creating a node for mothers under users in the database for a specific user
+        mMotherDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child("Mothers").child(userID);
 
         getUserInfo();
 
@@ -137,17 +140,15 @@ public class SettingsActivity extends AppCompatActivity {
         mName = mNameField.getText().toString();
         mPhone = mPhoneField.getText().toString();
         mEmail = mEmailField.getText().toString();
-
-
-
+        mLocality = mLocaltyField.getText().toString();
 
 
         Map userInfo = new HashMap();
         userInfo.put("name", mName);
         userInfo.put("phone", mPhone);
-        userInfo.put("car", mCar);
-        userInfo.put("service", mService);
-        mDriverDatabase.updateChildren(userInfo);
+        userInfo.put("email", mEmail);
+        userInfo.put("locality", mLocality);
+        mMotherDatabase.updateChildren(userInfo);
 
         if(resultUri != null) {
 
