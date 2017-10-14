@@ -37,7 +37,7 @@ public class SettingsActivity extends AppCompatActivity {
     private String mName;
     private String mPhone;
     private String mEmail;
-    private String mlocality;
+    private String mLocality;
     private String mProfileImageUrl;
 
     private Uri resultUri;
@@ -107,25 +107,17 @@ public class SettingsActivity extends AppCompatActivity {
                         mPhoneField.setText(mPhone);
                     }
 
-                    if(map.get("car")!=null){
-                        mCar = map.get("car").toString();
-                        mCarField.setText(mCar);
+                    if(map.get("email")!=null){
+                        mEmail = map.get("email").toString();
+                        mEmailField.setText(mEmail);
                     }
 
-                    if(map.get("service")!=null){
-                        mService = map.get("service").toString();
-                        switch (mService){
-                            case"UberX":
-                                mRadioGroup.check(R.id.UberX);
-                                break;
-                            case"UberBlack":
-                                mRadioGroup.check(R.id.UberBlack);
-                                break;
-                            case"UberXl":
-                                mRadioGroup.check(R.id.UberXl);
-                                break;
-                        }
+                    if(map.get("locality")!=null){
+                        mLocality = map.get("locality").toString();
+                        mLocaltyField.setText(mLocality);
+
                     }
+
                     if(map.get("profileImageUrl")!=null){
                         mProfileImageUrl = map.get("profileImageUrl").toString();
                         Glide.with(getApplication()).load(mProfileImageUrl).into(mProfileImage);
@@ -144,17 +136,11 @@ public class SettingsActivity extends AppCompatActivity {
     private void saveUserInformation() {
         mName = mNameField.getText().toString();
         mPhone = mPhoneField.getText().toString();
-        mCar = mCarField.getText().toString();
+        mEmail = mEmailField.getText().toString();
 
-        int selectId = mRadioGroup.getCheckedRadioButtonId();
 
-        final RadioButton radioButton = (RadioButton) findViewById(selectId);
 
-        if (radioButton.getText() == null){
-            return;
-        }
 
-        mService = radioButton.getText().toString();
 
         Map userInfo = new HashMap();
         userInfo.put("name", mName);
