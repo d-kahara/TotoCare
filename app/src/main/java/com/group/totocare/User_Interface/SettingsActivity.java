@@ -15,6 +15,18 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 import com.group.totocare.R;
 
 import java.io.ByteArrayOutputStream;
@@ -24,7 +36,7 @@ import java.util.Map;
 
 public class SettingsActivity extends AppCompatActivity {
 
-    private EditText mNameField, mPhoneField, mEmailField, mLocaltyField;
+    private EditText mNameField, mPhoneField, mEmailField, mLocalityField;
 
     private Button mBack, mConfirm;
 
@@ -53,7 +65,7 @@ public class SettingsActivity extends AppCompatActivity {
         mNameField = (EditText) findViewById(R.id.name);
         mPhoneField = (EditText) findViewById(R.id.phone);
         mEmailField = (EditText) findViewById(R.id.email);
-        mEmailField = (EditText) findViewById(R.id.locality);
+        mLocalityField = (EditText) findViewById(R.id.locality);
 
 
         mProfileImage = (ImageView) findViewById(R.id.profileImage);
@@ -96,7 +108,7 @@ public class SettingsActivity extends AppCompatActivity {
         });
     }
     private void getUserInfo(){
-        mDriverDatabase.addValueEventListener(new ValueEventListener() {
+        mMotherDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists() && dataSnapshot.getChildrenCount()>0){
@@ -117,7 +129,7 @@ public class SettingsActivity extends AppCompatActivity {
 
                     if(map.get("locality")!=null){
                         mLocality = map.get("locality").toString();
-                        mLocaltyField.setText(mLocality);
+                        mLocalityField.setText(mLocality);
 
                     }
 
@@ -140,7 +152,7 @@ public class SettingsActivity extends AppCompatActivity {
         mName = mNameField.getText().toString();
         mPhone = mPhoneField.getText().toString();
         mEmail = mEmailField.getText().toString();
-        mLocality = mLocaltyField.getText().toString();
+        mLocality = mLocalityField.getText().toString();
 
 
         Map userInfo = new HashMap();
@@ -179,7 +191,7 @@ public class SettingsActivity extends AppCompatActivity {
 
                     Map newImage = new HashMap();
                     newImage.put("profileImageUrl", downloadUrl.toString());
-                    mDriverDatabase.updateChildren(newImage);
+                    mMotherDatabase.updateChildren(newImage);
 
                     finish();
                     return;
