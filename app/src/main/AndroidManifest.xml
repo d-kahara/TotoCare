@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.group.totocare">
+    package="com.group.TotoCare">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -9,17 +11,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".User_Interface.MainActivity">
+
+
+        <activity android:name="com.group.TotoCare.User_Interface.MainActivity"/>
+        <activity android:name="com.group.TotoCare.Fragments.HomeFragment" />
+        <activity android:name="com.group.TotoCare.Fragments.BabyFragment" />
+        <activity android:name="com.group.TotoCare.Fragments.CheckUpsFragment" />
+        <activity android:name="com.group.TotoCare.Fragments.CommunityFragment" />
+        <activity android:name=".User_Interface.SettingsActivity"/>
+        <activity android:name="com.group.TotoCare.User_Interface.StartActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Fragments.HomeFragment" />
-        <activity android:name=".Fragments.BabyFragment" />
-        <activity android:name=".Fragments.CheckUpsFragment" />
-        <activity android:name=".Fragments.CommunityFragment"></activity>
     </application>
 
 </manifest>

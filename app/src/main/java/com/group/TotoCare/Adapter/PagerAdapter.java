@@ -1,13 +1,13 @@
-package com.group.totocare.Adapter;
+package com.group.TotoCare.Adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.group.totocare.Fragments.BabyFragment;
-import com.group.totocare.Fragments.CheckUpsFragment;
-import com.group.totocare.Fragments.CommunityFragment;
-import com.group.totocare.Fragments.HomeFragment;
+import com.group.TotoCare.Fragments.BabyFragment;
+import com.group.TotoCare.Fragments.CheckUpsFragment;
+import com.group.TotoCare.Fragments.CommunityFragment;
+import com.group.TotoCare.Fragments.HomeFragment;
 
 /**
  * Created by rahmak on 10/12/17

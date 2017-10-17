@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "784426687931",
+    "firebase_url": "https://totocare-4dc99.firebaseio.com",
+    "project_id": "totocare-4dc99",
+    "storage_bucket": "totocare-4dc99.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:784426687931:android:1b9e378d6155b587",
+        "android_client_info": {
+          "package_name": "com.group.TotoCare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "784426687931-2a0bl6kphmmggn9i9ajiupo4fdq1a954.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.group.TotoCare",
+            "certificate_hash": "ead9a07b255db30849d2f8400536103a4d7dbbba"
+          }
+        },
+        {
+          "client_id": "784426687931-co4q216hqaqaf8778snucgiivqeen6lc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8xc_6dtY_sH5dgmcPcLwIgBT3A49_tfk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "784426687931-co4q216hqaqaf8778snucgiivqeen6lc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
