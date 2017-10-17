@@ -1,4 +1,4 @@
-package com.group.totocare;
+package com.group.TotoCare;
 
 import org.junit.Test;
 

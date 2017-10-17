@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">TotoCare</string>
 
-    /*
-    string resources for Menu Main resources
-    */
+
     <string name="action_settings">Settings</string>
+    <string name="facebook_application_id" translatable="false">126234558132407</string>
+    <!-- Facebook Application ID, prefixed by 'fb'.  Enables Chrome Custom tabs. -->
+    <string name="facebook_login_protocol_scheme" translatable="false">fb126234558132407</string>
+
 </resources>

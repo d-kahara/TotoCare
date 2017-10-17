@@ -1,4 +1,4 @@
-package com.group.totocare.User_Interface;
+package com.group.TotoCare.User_Interface;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,8 +12,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -27,7 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import com.group.totocare.R;
+import com.group.TotoCare.R;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -79,9 +77,9 @@ public class SettingsActivity extends AppCompatActivity {
 
 
 //     Creating a node for mothers under users in the database for a specific user
-        mMotherDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child("Mothers").child(userID);
+       // mMotherDatabase = FirebaseDatabase.getInstance().getReference().child("Mothers").child(userID);
 
-        getUserInfo();
+        //getUserInfo();
 
         mProfileImage.setOnClickListener(new View.OnClickListener() {
             @Override
