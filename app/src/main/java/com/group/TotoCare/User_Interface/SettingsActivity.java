@@ -8,6 +8,7 @@ import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -60,27 +61,30 @@ public class SettingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
 
 
-        mNameField = (EditText) findViewById(R.id.name);
-        mPhoneField = (EditText) findViewById(R.id.phone);
-        mEmailField = (EditText) findViewById(R.id.email);
-        mLocalityField = (EditText) findViewById(R.id.locality);
+        mNameField =  findViewById(R.id.name);
+        mPhoneField = findViewById(R.id.phone);
+        mEmailField = findViewById(R.id.email);
+        mLocalityField = findViewById(R.id.locality);
 
 
-        mProfileImage = (ImageView) findViewById(R.id.profileImage);
+        mProfileImage = findViewById(R.id.profileImage);
 
 
-        mBack = (Button) findViewById(R.id.back);
-        mConfirm = (Button) findViewById(R.id.confirm);
+        mBack = findViewById(R.id.back);
+        mConfirm = findViewById(R.id.confirm);
 
         mAuth = FirebaseAuth.getInstance();
+//     Creating a node for mothers under users in the database for a specific user
         userID = mAuth.getCurrentUser().getUid();
 
+        Log.d("onCreate: ", userID);
 
-//     Creating a node for mothers under users in the database for a specific user
-       // mMotherDatabase = FirebaseDatabase.getInstance().getReference().child("Mothers").child(userID);
 
-        //getUserInfo();
+        mMotherDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child("Mothers").child(userID);
 
+        getUserInfo();
+
+        //Setting up Profile Pic
         mProfileImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -105,6 +109,8 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
     }
+
+//
     private void getUserInfo(){
         mMotherDatabase.addValueEventListener(new ValueEventListener() {
             @Override
