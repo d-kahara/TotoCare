@@ -2,22 +2,73 @@ package com.group.TotoCare.User_Interface;
 
 import android.content.Intent;
 import android.os.Build;
+import android.support.annotation.NonNull;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.firebase.ui.auth.AuthUI;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.group.TotoCare.Adapter.PagerAdapter;
 import com.group.TotoCare.R;
 
 public class
 MainActivity extends AppCompatActivity {
+    TabLayout tabLayout_MainActivityxml;
+    ViewPager viewPager_MainActivityxml;
+    PagerAdapter pagerAdapter;
     private MenuInflater inflater;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//  Initialize our instantiated variables
+        tabLayout_MainActivityxml = (TabLayout) findViewById(R.id.tabLayout_MainActivityxml);
+        viewPager_MainActivityxml = (ViewPager) findViewById(R.id.viewPager_MainActivityxml);
+
+        /*set icons for each tab*/
+
+        tabLayout_MainActivityxml.addTab(tabLayout_MainActivityxml.newTab().setIcon(R.mipmap.ic_home_white_24dp));
+        tabLayout_MainActivityxml.addTab(tabLayout_MainActivityxml.newTab().setIcon(R.mipmap.ic_face_white_24dp));
+        tabLayout_MainActivityxml.addTab(tabLayout_MainActivityxml.newTab().setIcon(R.mipmap.ic_check_circle_white_24dp));
+        tabLayout_MainActivityxml.addTab(tabLayout_MainActivityxml.newTab().setIcon(R.mipmap.ic_people_white_24dp));
+
+        /*use our adapter to view each screen*/
+
+        pagerAdapter = new com.group.TotoCare.Adapter.PagerAdapter(getSupportFragmentManager(), tabLayout_MainActivityxml.getTabCount());
+        viewPager_MainActivityxml.setAdapter(pagerAdapter);
+
+        /*listen for clicks*/
+
+        viewPager_MainActivityxml.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout_MainActivityxml));
+
+        tabLayout_MainActivityxml.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager_MainActivityxml.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+            }
+        });
+
+
+
     }
     /*
     onOptionsMenu for Main Activity
@@ -43,6 +94,17 @@ MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
                 startActivity(intent);
                 return true;
+
+            case R.id.logout:
+                AuthUI.getInstance()
+                        .signOut(this)
+                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                            public void onComplete(@NonNull Task<Void> task) {
+                                // user is now signed out
+                                startActivity(new Intent(MainActivity.this, StartActivity.class));
+                                finish();
+                            }
+                        });
             default:
                 return super.onOptionsItemSelected(item);
         }
