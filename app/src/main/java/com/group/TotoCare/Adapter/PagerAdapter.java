@@ -7,7 +7,6 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import com.group.TotoCare.Fragments.BabyFragment;
 import com.group.TotoCare.Fragments.CheckUpsFragment;
 
-import com.group.TotoCare.Fragments.CommunityFragment;
 import com.group.TotoCare.Fragments.HomeFragment;
 
 /**
@@ -32,9 +31,6 @@ public class PagerAdapter extends FragmentStatePagerAdapter{
                 return new BabyFragment();
             case 2:
                 return new CheckUpsFragment();
-            case 3:
-                return new
-                        CommunityFragment();
             default:
                 return null;
         }
