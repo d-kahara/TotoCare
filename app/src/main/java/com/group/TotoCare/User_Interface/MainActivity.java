@@ -37,7 +37,7 @@ MainActivity extends AppCompatActivity {
         /*set icons for each tab*/
 
         tabLayout_MainActivityxml.addTab(tabLayout_MainActivityxml.newTab().setIcon(R.drawable.ic_pregnant_woman_white_24dp));
-        tabLayout_MainActivityxml.addTab(tabLayout_MainActivityxml.newTab().setIcon(R.drawable.ic_child_care_white_24dp));
+        tabLayout_MainActivityxml.addTab(tabLayout_MainActivityxml.newTab().setIcon(R.drawable.ic_child_friendly_white_24dp));
         tabLayout_MainActivityxml.addTab(tabLayout_MainActivityxml.newTab().setIcon(R.drawable.ic_assignment_white_24dp));
 
         /*use our adapter to view each screen*/
