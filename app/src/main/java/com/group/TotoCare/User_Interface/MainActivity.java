@@ -18,6 +18,7 @@ import com.group.TotoCare.Adapter.PagerAdapter;
 import com.group.TotoCare.R;
 
 public class
+
 MainActivity extends AppCompatActivity {
     TabLayout tabLayout_MainActivityxml;
     ViewPager viewPager_MainActivityxml;
@@ -35,10 +36,9 @@ MainActivity extends AppCompatActivity {
 
         /*set icons for each tab*/
 
-        tabLayout_MainActivityxml.addTab(tabLayout_MainActivityxml.newTab().setIcon(R.mipmap.ic_home_white_24dp));
-        tabLayout_MainActivityxml.addTab(tabLayout_MainActivityxml.newTab().setIcon(R.mipmap.ic_face_white_24dp));
-        tabLayout_MainActivityxml.addTab(tabLayout_MainActivityxml.newTab().setIcon(R.mipmap.ic_check_circle_white_24dp));
-        tabLayout_MainActivityxml.addTab(tabLayout_MainActivityxml.newTab().setIcon(R.mipmap.ic_people_white_24dp));
+        tabLayout_MainActivityxml.addTab(tabLayout_MainActivityxml.newTab().setIcon(R.drawable.ic_pregnant_woman_white_24dp));
+        tabLayout_MainActivityxml.addTab(tabLayout_MainActivityxml.newTab().setIcon(R.drawable.ic_child_friendly_white_24dp));
+        tabLayout_MainActivityxml.addTab(tabLayout_MainActivityxml.newTab().setIcon(R.drawable.ic_assignment_white_24dp));
 
         /*use our adapter to view each screen*/
 
@@ -93,6 +93,11 @@ MainActivity extends AppCompatActivity {
             case R.id.action_settings:
                 Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
                 startActivity(intent);
+                return true;
+
+            case R.id.community:
+                Intent intent1 = new Intent(MainActivity.this, CommunityActivity.class);
+                startActivity(intent1);
                 return true;
 
             case R.id.logout:
