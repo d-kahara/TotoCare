@@ -38,7 +38,6 @@ public class CommunityActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String name = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();
-                Log.d("onClick: ", name);
                 EditText input = (EditText)findViewById(R.id.input);
 
                 // Read the input field and push a new instance
