@@ -10,7 +10,7 @@ import com.group.TotoCare.R;
 import com.group.TotoCare.model.Baby;
 
 /**
- * Created by david on 10/18/17.
+ * Created by david on 10/18/17
  */
 
 public class FirebaseBabyViewHolder extends RecyclerView.ViewHolder  {
@@ -20,7 +20,7 @@ public class FirebaseBabyViewHolder extends RecyclerView.ViewHolder  {
     View mView;
     Context mContext;
 
-    public FirebaseRestaurantViewHolder(View itemView) {
+    public FirebaseBabyViewHolder(View itemView) {
         super(itemView);
         mView = itemView;
         mContext = itemView.getContext();
