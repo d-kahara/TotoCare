@@ -16,19 +16,20 @@
         <activity android:name=".Fragments.BabyFragment" />
         <activity android:name=".Fragments.CheckUpsFragment" />
         <activity android:name=".Fragments.CommunityFragment" />
-        <activity android:name=".User_Interface.SettingsActivity"
+        <activity
+            android:name=".User_Interface.SettingsActivity"
             android:parentActivityName=".User_Interface.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".User_Interface.MainActivity"/>
+                android:value=".User_Interface.MainActivity" />
         </activity>
-        <activity android:name=".User_Interface.CommunityActivity"
+        <activity
+            android:name=".User_Interface.CommunityActivity"
             android:parentActivityName=".User_Interface.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".User_Interface.MainActivity"/>
+                android:value=".User_Interface.MainActivity" />
         </activity>
-
         <activity android:name=".User_Interface.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,6 +37,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Fragments.RecipeFragment"></activity>
     </application>
 
 </manifest>

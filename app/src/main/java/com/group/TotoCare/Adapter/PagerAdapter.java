@@ -8,6 +8,7 @@ import com.group.TotoCare.Fragments.BabyFragment;
 import com.group.TotoCare.Fragments.CheckUpsFragment;
 
 import com.group.TotoCare.Fragments.HomeFragment;
+import com.group.TotoCare.Fragments.RecipeFragment;
 
 /**
  * Created by rahmak on 10/12/17
@@ -31,6 +32,8 @@ public class PagerAdapter extends FragmentStatePagerAdapter{
                 return new BabyFragment();
             case 2:
                 return new CheckUpsFragment();
+            case 3:
+                return new RecipeFragment();
             default:
                 return null;
         }

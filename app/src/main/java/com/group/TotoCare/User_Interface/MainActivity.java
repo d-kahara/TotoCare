@@ -39,7 +39,7 @@ MainActivity extends AppCompatActivity {
         tabLayout_MainActivityxml.addTab(tabLayout_MainActivityxml.newTab().setIcon(R.drawable.ic_pregnant_woman_white_24dp));
         tabLayout_MainActivityxml.addTab(tabLayout_MainActivityxml.newTab().setIcon(R.drawable.ic_child_friendly_white_24dp));
         tabLayout_MainActivityxml.addTab(tabLayout_MainActivityxml.newTab().setIcon(R.drawable.ic_assignment_white_24dp));
-
+        tabLayout_MainActivityxml.addTab(tabLayout_MainActivityxml.newTab().setIcon(R.mipmap.ic_home_white_24dp));
         /*use our adapter to view each screen*/
 
         pagerAdapter = new com.group.TotoCare.Adapter.PagerAdapter(getSupportFragmentManager(), tabLayout_MainActivityxml.getTabCount());
