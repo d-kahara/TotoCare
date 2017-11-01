@@ -9,7 +9,7 @@ import com.group.TotoCare.R;
 import com.group.TotoCare.model.Food;
 
 /**
- * Created by david on 10/29/17.
+ * Created by david on 10/29/17
  */
 
 public class FirebaseFoodViewHolder extends RecyclerView.ViewHolder {

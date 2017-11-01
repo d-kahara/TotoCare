@@ -14,7 +14,7 @@ import com.group.TotoCare.model.Food;
 import java.util.ArrayList;
 
 /**
- * Created by david on 10/29/17.
+ * Created by david on 10/29/17
  */
 
 public class FirebaseFoodListAdapter extends FirebaseRecyclerAdapter<Food, FirebaseFoodViewHolder> {
