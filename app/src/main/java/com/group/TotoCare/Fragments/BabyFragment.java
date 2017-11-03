@@ -3,27 +3,17 @@ package com.group.TotoCare.Fragments;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
 import com.group.TotoCare.Adapter.FirebaseFoodListAdapter;
-import com.group.TotoCare.Adapter.FirebaseFoodViewHolder;
+import com.group.TotoCare.Adapter.FirebaseViewHolder;
 import com.group.TotoCare.R;
 import com.group.TotoCare.model.Food;
-
-import java.util.ArrayList;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -50,7 +40,7 @@ public class BabyFragment extends Fragment {
         Query query = FirebaseDatabase.getInstance()
                 .getReference("nutrition");
 
-        mFirebaseAdapter = new FirebaseFoodListAdapter(Food.class, R.layout.food_list_item, FirebaseFoodViewHolder.class,
+        mFirebaseAdapter = new FirebaseFoodListAdapter(Food.class, R.layout.food_list_item, FirebaseViewHolder.class,
                 query, getActivity());
 
         mRecyclerView.setHasFixedSize(true);

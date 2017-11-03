@@ -6,12 +6,11 @@
     android:layout_height="match_parent"
     tools:context="com.group.TotoCare.Fragments.BabyFragment">
 
-    <TextView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewHome"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="This is Home Fragment"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        />
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
 
 </RelativeLayout>

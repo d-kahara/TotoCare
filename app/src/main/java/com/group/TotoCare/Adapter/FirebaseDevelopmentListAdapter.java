@@ -8,7 +8,8 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Query;
-import com.group.TotoCare.model.Food;
+import com.group.TotoCare.model.Development;
+
 
 import java.util.ArrayList;
 
@@ -16,14 +17,14 @@ import java.util.ArrayList;
  * Created by david on 10/29/17
  */
 
-public class FirebaseFoodListAdapter extends FirebaseRecyclerAdapter<Food, FirebaseViewHolder> {
+public class FirebaseDevelopmentListAdapter extends FirebaseRecyclerAdapter<Development, FirebaseViewHolder> {
     private DatabaseReference mRef;
     private Context mContext;
     private ChildEventListener mChildEventListener;
-    private ArrayList<Food> mFoods = new ArrayList<>();
+    private ArrayList<Development> mDevs = new ArrayList<>();
 
-    public FirebaseFoodListAdapter(Class<Food> modelClass, int modelLayout, Class<FirebaseViewHolder> viewHolderClass,
-                                   Query ref, Context context) {
+    public FirebaseDevelopmentListAdapter(Class<Development> modelClass, int modelLayout, Class<FirebaseViewHolder> viewHolderClass,
+                                          Query ref, Context context) {
         super(modelClass, modelLayout, viewHolderClass, ref);
         mRef = ref.getRef();
         mContext = context;
@@ -31,7 +32,7 @@ public class FirebaseFoodListAdapter extends FirebaseRecyclerAdapter<Food, Fireb
 
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                mFoods.add(dataSnapshot.getValue(Food.class));
+                mDevs.add(dataSnapshot.getValue(Development.class));
             }
 
             @Override
@@ -57,8 +58,8 @@ public class FirebaseFoodListAdapter extends FirebaseRecyclerAdapter<Food, Fireb
     }
 
     @Override
-    protected void populateViewHolder(final FirebaseViewHolder viewHolder, Food model, int position) {
-        viewHolder.bindFood(model);
+    protected void populateViewHolder(final FirebaseViewHolder viewHolder, Development model, int position) {
+        viewHolder.bindDevelopment(model);
     }
 
 
