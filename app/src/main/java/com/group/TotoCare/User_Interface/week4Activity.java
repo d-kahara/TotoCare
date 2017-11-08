@@ -1,6 +1,5 @@
 package com.group.TotoCare.User_Interface;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
@@ -27,12 +26,6 @@ public class week4Activity extends AppCompatActivity {
         setContentView(R.layout.week4);
 
         WebView webView = findViewById(R.id.webview);
-
-
-
-
-
-
 
 
         webView.setInitialScale(1);
