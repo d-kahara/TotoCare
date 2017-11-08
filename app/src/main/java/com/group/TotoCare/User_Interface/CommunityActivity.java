@@ -1,5 +1,6 @@
 package com.group.TotoCare.User_Interface;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -24,6 +25,8 @@ import com.group.TotoCare.model.ChatMessage;
 
 public class CommunityActivity extends AppCompatActivity {
     private FirebaseListAdapter<ChatMessage> adapter;
+    private EditText input;
+    private  TextView messageText, messageUser, messageTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +41,11 @@ public class CommunityActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String name = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();
-                EditText input = (EditText)findViewById(R.id.input);
+                input = (EditText)findViewById(R.id.input);
+                Typeface myfont = Typeface.createFromAsset(getAssets(), "fonts/Raleway-Regular.ttf");
+                messageTime.setTypeface(myfont);
+                input.setTypeface(myfont);
+
 
                 // Read the input field and push a new instance
                 // of ChatMessage to the Firebase database
@@ -66,9 +73,13 @@ public class CommunityActivity extends AppCompatActivity {
             @Override
             protected void populateView(View v, ChatMessage model, int position) {
                 // Get references to the views of message.xml
-                TextView messageText = (TextView)v.findViewById(R.id.message_text);
-                TextView messageUser = (TextView)v.findViewById(R.id.message_user);
-                TextView messageTime = (TextView)v.findViewById(R.id.message_time);
+                messageText = (TextView)v.findViewById(R.id.message_text);
+                messageUser = (TextView)v.findViewById(R.id.message_user);
+                messageTime = (TextView)v.findViewById(R.id.message_time);
+                Typeface myfont = Typeface.createFromAsset(getAssets(), "fonts/Raleway-Regular.ttf");
+                messageTime.setTypeface(myfont);
+                messageUser.setTypeface(myfont);
+                messageText.setTypeface(myfont);
 
                 // Set their text
                 messageText.setText(model.getMessageText());

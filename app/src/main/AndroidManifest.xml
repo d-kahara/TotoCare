@@ -40,10 +40,15 @@
         </activity>
         <activity android:name=".Fragments.RecipeFragment" />
         <activity android:name=".User_Interface.RecipeActivity" />
-        <activity android:name=".User_Interface.RecipeDetailActivity"></activity>
-        <activity android:name=".User_Interface.week4Activity">
-
-        </activity>
+        <activity android:name=".User_Interface.RecipeDetailActivity" />
+        <activity android:name=".User_Interface.week4Activity" />
+        <activity android:name=".User_Interface.week8Activity" />
+        <activity android:name=".User_Interface.week16Activity" />
+        <activity android:name=".User_Interface.week20Activity" />
+        <activity android:name=".User_Interface.week24Activity" />
+        <activity android:name=".User_Interface.week32Activity" />
+        <activity android:name=".User_Interface.week36Activity" />
+        <activity android:name=".User_Interface.week40Activity"></activity>
     </application>
 
 </manifest>

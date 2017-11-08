@@ -2,6 +2,7 @@ package com.group.TotoCare.User_Interface;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.view.MenuItemCompat;
@@ -50,9 +51,11 @@ public class RecipeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe);
-        // mListView = (ListView) findViewById(R.id.listView);
         mRecipeTextView = (TextView) findViewById(R.id.recipeTextView);
-        //mSubmitRecipeButton = (Button) findViewById(R.id.submitRecipe);
+
+        Typeface myfont = Typeface.createFromAsset(getAssets(), "fonts/Raleway-Regular.ttf");
+        mRecipeTextView.setTypeface(myfont);
+
         ButterKnife.bind(this);
         Intent enterRecipe = getIntent();
         String recipes = enterRecipe.getStringExtra("recipes");
