@@ -23,6 +23,7 @@ public class week4Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setTitle("Week 4 Baby Development");
         setContentView(R.layout.week4);
 
         WebView webView = findViewById(R.id.webview);

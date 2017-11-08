@@ -1,6 +1,7 @@
 package com.group.TotoCare.User_Interface;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.icu.util.DateInterval;
 import android.os.Build;
 import android.os.CountDownTimer;
@@ -62,6 +63,8 @@ MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mProfileImage = findViewById(R.id.profileImageCardView);
         mDueDateField =  findViewById(R.id.ctdTimer);
+        Typeface myfont = Typeface.createFromAsset(getAssets(), "fonts/Raleway-Regular.ttf");
+        mDueDateField.setTypeface(myfont);
 
 
 //        Setting Profile pic on image View

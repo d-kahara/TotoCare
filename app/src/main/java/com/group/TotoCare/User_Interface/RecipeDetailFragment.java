@@ -2,6 +2,7 @@ package com.group.TotoCare.User_Interface;
 
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -68,8 +69,8 @@ public class RecipeDetailFragment extends Fragment implements View.OnClickListen
         mRecipeNameLabel.setText(mRecipe.getRecipeName());
         mIngredientsTextView.setText(android.text.TextUtils.join("\n",mRecipe.getIngredients()));
 
-        //Typeface ralewayFont=Typeface.createFromAsset(getAssets(),"fonts/Raleway-ExtraLight.ttf");
-        // mIngredientsTextView.getAsssetTypeface(ralewayFont);
+        Typeface ralewayFont= Typeface.createFromAsset(getActivity().getAssets(),"fonts/Raleway-ExtraLight.ttf");
+        mIngredientsTextView.setTypeface(ralewayFont);
         mRecipeNameLabel.setOnClickListener(this);
 
 
