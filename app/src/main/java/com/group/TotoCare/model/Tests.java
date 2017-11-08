@@ -7,26 +7,26 @@ package com.group.TotoCare.model;
 public class Tests {
 
     private String test;
-    private String testDescription;
-    private String testUrl;
+    private String description;
+    private String url;
     //create empty constructor
     public Tests(){
 
     }
-    public Tests(String test, String testDescription, String testUrl){
+    public Tests(String test, String description, String url){
         this.test=test;
-        this.testDescription=testDescription;
-        this.testUrl=testUrl;
+        this.description = description;
+        this.url =url;
     }
 
 
     public String getTest(){
         return test;
     }
-    public String getTestDescription(){
-        return testDescription;
+    public String getDescription(){
+        return description;
     }
-    public String getImageIrl(){
-        return testUrl;
+    public String getUrl(){
+        return url;
     }
 }

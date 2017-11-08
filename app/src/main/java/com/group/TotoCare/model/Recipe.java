@@ -1,12 +1,14 @@
 package com.group.TotoCare.model;
 
+import org.parceler.Parcel;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by david on 11/1/17.
  */
-
+@Parcel
 public class Recipe {
     String recipeName;
 

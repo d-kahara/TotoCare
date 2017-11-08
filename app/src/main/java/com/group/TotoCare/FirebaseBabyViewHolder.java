@@ -28,17 +28,17 @@ public class FirebaseBabyViewHolder extends RecyclerView.ViewHolder {
 
 
 
-    public void bindDevelopment(Development development) {
-        TextView size = mView.findViewById(R.id.sizeDev);
-        TextView description = mView.findViewById(R.id.descriptionHome);
-        ImageView image = mView.findViewById(R.id.imageHome);
-
-        size.setText(development.getDevelopmentSize());
-        description.setText(development.getDevelopmentDescription());
-        Glide.with(mContext)
-                .load(development.getDevelopmentURL())
-                .into(image);
-    }
+//    public void bindDevelopment(Development development) {
+//        TextView size = mView.findViewById(R.id.sizeDev);
+//        TextView description = mView.findViewById(R.id.descriptionHome);
+//        ImageView image = mView.findViewById(R.id.imageHome);
+//
+//        size.setText(development.getSize());
+//        description.setText(development.getDescription());
+//        Glide.with(mContext)
+//                .load(development.getUrl())
+//                .into(image);
+//    }
 
 
 }

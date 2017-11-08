@@ -6,6 +6,7 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -37,7 +38,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Fragments.RecipeFragment"></activity>
+        <activity android:name=".Fragments.RecipeFragment" />
+        <activity android:name=".User_Interface.RecipeActivity" />
+        <activity android:name=".User_Interface.RecipeDetailActivity"></activity>
+        <activity android:name=".User_Interface.week4Activity">
+
+        </activity>
     </application>
 
 </manifest>

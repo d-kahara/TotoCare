@@ -16,5 +16,8 @@
     <item
         android:id="@+id/logout"
         android:title="logout" />
+    <item
+        android:id="@+id/recipe"
+        android:title="Recipes" />
 
 </menu>

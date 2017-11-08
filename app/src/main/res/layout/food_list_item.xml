@@ -25,7 +25,7 @@
                 android:textSize="23dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
-                android:textColor="@color/com_facebook_blue"
+                android:textColor="@color/colorPrimaryDark"
                 android:typeface="serif"/>
 
             <TextView
@@ -44,7 +44,7 @@
                 android:text="Description"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
-                android:textColor="@color/com_facebook_blue"
+                android:textColor="@color/colorPrimaryDark"
                 android:typeface="serif"/>
 
             <TextView
@@ -64,7 +64,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:textSize="23dp"
-                android:textColor="@color/com_facebook_blue"
+                android:textColor="@color/colorPrimaryDark"
                 android:typeface="serif"/>
             <TextView
                 android:id="@+id/foods"

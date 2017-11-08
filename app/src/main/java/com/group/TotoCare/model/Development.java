@@ -21,13 +21,13 @@ public class Development{
 
     //getter methods
 
-    public String getDevelopmentSize(){
+    public String getSize(){
         return size;
     }
-    public String getDevelopmentDescription(){
+    public String getDescription(){
         return description;
     }
-    public String getDevelopmentURL(){
+    public String getUrl(){
         return url;
     }
 }

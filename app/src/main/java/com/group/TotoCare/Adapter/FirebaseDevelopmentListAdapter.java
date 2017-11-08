@@ -59,7 +59,7 @@ public class FirebaseDevelopmentListAdapter extends FirebaseRecyclerAdapter<Deve
 
     @Override
     protected void populateViewHolder(final FirebaseViewHolder viewHolder, Development model, int position) {
-        viewHolder.bindDevelopment(model);
+
     }
 
 

@@ -37,17 +37,7 @@ public class FirebaseViewHolder extends RecyclerView.ViewHolder {
         foods.setText(food.getFoods());
     }
 
-    public void bindDevelopment(Development development) {
-        TextView size = mView.findViewById(R.id.sizeDev);
-        TextView description = mView.findViewById(R.id.descriptionHome);
-        ImageView image = mView.findViewById(R.id.imageHome);
 
-        size.setText(development.getDevelopmentSize());
-        description.setText(development.getDevelopmentDescription());
-        Glide.with(mContext)
-                .load(development.getDevelopmentURL())
-                .into(image);
-    }
 
     public void bindTest(Tests tests) {
         TextView test = mView.findViewById(R.id.test);
@@ -55,9 +45,9 @@ public class FirebaseViewHolder extends RecyclerView.ViewHolder {
         ImageView image = mView.findViewById(R.id.imageTest);
 
         test.setText(tests.getTest());
-        description.setText(tests.getTestDescription());
+        description.setText(tests.getDescription());
         Glide.with(mContext)
-                .load(tests.getImageIrl())
+                .load(tests.getUrl())
                 .into(image);
     }
 }
