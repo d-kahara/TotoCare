@@ -6,6 +6,7 @@ package com.group.TotoCare.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -99,7 +100,9 @@ public class RecipeListAdapter extends RecyclerView.Adapter<RecipeListAdapter.Re
 
             mNameTextView.setText(recipe.getRecipeName());
             mPrepTimeTextView.setText("Prep Time:"+recipe.getPrepTime() + "Mins");
-
+            Typeface myFont=Typeface.createFromAsset(itemView.getContext().getAssets(),"fonts/Raleway-Regular.ttf");
+            mNameTextView.setTypeface(myFont);
+            mPrepTimeTextView.setTypeface(myFont);
         }
     }
 
