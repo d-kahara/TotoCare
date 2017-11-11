@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:id="@+id/recipeImageView"
+        android:src="@drawable/ic_local_dining_white_24dp"
+        android:scaleType="centerCrop"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="3dp"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recipeNameTextView"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="Recipe Name"
+            android:textColor="@color/colorPrimary"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prep Time"
+                android:id="@+id/prepTimeTextView"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/colorPrimary"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
